@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+/* ========== ROOT ========== */
+:root {
+  /* COLORS */
+  --main-color: hsl(0, 0%, 100%);
+  --reaction: hsl(0, 100%, 67%);
+  --reaction-bg: hsla(0, 100%, 67%, 0.101);
+  --memory: hsl(39, 100%, 56%);
+  --memory-bg: hsla(39, 100%, 56%, 0.101);
+  --verbal: hsl(166, 100%, 37%);
+  --verbal-bg: hsla(166, 100%, 37%, 0.101);
+  --visual: hsl(234, 85%, 45%);
+  --visual-bg: hsla(234, 85%, 45%, 0.101);
+  --result-component: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  --result: hsl(241, 100%, 89%);
+  --circle-gradinet: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+
+  /* FONT */
+  --main-font: "Hanken Grotesk", sans-serif;
+  --font-500: 500;
+  --font-700: 700;
+  --font-800: 800;
+}
+/* ========== BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--main-font);
+}
+/* ========== RESULT CARD ========== */
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 450px;
+  width: 700px;
+  border-radius: 38px;
+  background-color: var(--main-color);
+  box-shadow: 10px 10px 20px 0px hsla(252, 100%, 67%, 0.12);
+}
+/* Result Component */
+.wrapper1 {
+  background-image: var(--result-component);
+  padding: 38px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 38px;
+}
+.result {
+  color: var(--result);
+  text-align: center;
+  font-size: 18px;
+  font-weight: var(--font-500);
+}
+.circle {
+  border: none;
+  margin: 26px 0;
+  height: 200px;
+  width: 180px;
+  border-radius: 50%;
+  background-image: var(--circle-gradinet);
+  text-align: center;
+}
+.circle h3 {
+  margin-top: 35px;
+  font-size: 56px;
+  color: var(--main-color);
+  font-weight: var(--font-800);
+}
+.circle p {
+  color: var(--result);
+  font-size: 18px;
+}
+.great {
+  font-size: 36px;
+  color: var(--main-color);
+  font-weight: var(--font-700);
+  text-align: center;
+}
+.great p {
+  margin-top: 24px;
+  color: var(--result);
+  font-size: 18px;
+  font-weight: var(--font-500);
+  overflow-wrap: break-word;
+}
+/* Result Summary */
+.wrapper2 {
+  background-image: var(--main-color);
+  width: 50%;
+  padding: 38px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  border-radius: 38px;
+}
+.summary {
+  text-align: left;
+  font-size: 18px;
+  color: hsl(224, 30%, 27%);
+  margin-bottom: 18px;
+}
+.component {
+  margin-right: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.reaction,
+.memory,
+.verbal,
+.visual {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 300px;
+  border: none;
+  border-radius: 12px;
+  margin: 8px;
+}
+.reaction img,
+.memory img,
+.verbal img,
+.visual img {
+  margin-right: 8px;
+}
+.reaction span,
+.memory span,
+.verbal span,
+.visual span {
+  margin-right: 16px;
+  font-weight: var(--font-700);
+}
+.reaction p,
+.memory p,
+.verbal p,
+.visual p {
+  text-align: right;
+  margin-left: 94px;
+}
+.reaction {
+  background-color: var(--reaction-bg);
+  padding: 14px;
+}
+.reaction span {
+  color: var(--reaction);
+}
+.memory {
+  background-color: var(--memory-bg);
+  padding: 14px;
+}
+.memory span {
+  color: var(--memory);
+}
+.verbal {
+  background-color: var(--verbal-bg);
+  padding: 14px;
+}
+.verbal span {
+  color: var(--verbal);
+}
+.visual {
+  background-color: var(--visual-bg);
+  padding: 14px;
+}
+.visual span {
+  color: var(--visual);
+}
+.btn {
+  width: 300px;
+  border: none;
+  border-radius: 62px;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  background-color: hsl(224, 30%, 27%);
+}
+.btn:hover {
+  background-image: var(--result-component);
+}
+.attribution {
+  font-size: 16px;
+  text-align: center;
+  margin: 30px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* ========== MEDIA QUERY ========== */
+@media screen and (max-width: 375px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    width: 400px;
+  }
+  .wrapper1 {
+    width: 300px;
+  }
+  .attribution {
+    margin-top: 160px;
+  }
+}
