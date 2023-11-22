@@ -23,8 +23,8 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Mangesh636/results-summary-component-main/)
-- Live Site URL: [Add live site URL here](https://mangesh636.github.io/results-summary-component-main/)
+- Solution URL: [Github](https://github.com/Mangesh636/results-summary-component-main/)
+- Live Site URL: [Website](https://mangesh636.github.io/results-summary-component-main/)
 
 ## My process
 
